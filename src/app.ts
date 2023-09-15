@@ -9,6 +9,8 @@ async function main (){
 
     // todo: start server
     console.log("Application is running...")
-    new Server().start()
+    new Server({
+        port: 3000
+    }).start()
 
 }
