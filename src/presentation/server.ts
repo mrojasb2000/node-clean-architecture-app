@@ -17,7 +17,13 @@ export class Server {
     }
 
 	async start() {
+        // Middlewares
+        this.app.use(express.json());
+
+        // Routes
         this.app.use(this.routes);
+
+        // Listen
         this.app.listen(this.port, () => {
             console.log(`Server is running on port ${ this.port }`)
         })
